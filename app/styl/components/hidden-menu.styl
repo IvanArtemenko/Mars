@@ -1,0 +1,46 @@
+.hidden-menu
+  position fixed
+  width 300px
+  height 100%
+  top 0
+  right -300px
+  background-color $grey-light
+  text-align center
+  transition right 0.4s ease-in-out
+  ul
+    centralizer(true, true)
+  li
+    padding-top 15px
+    a
+      display block
+      color $grey-dark
+      text-transform uppercase
+      font-size 18px
+      transition 0.2s ease-in-out
+      &::after
+        content ""
+        position absolute
+        display block
+        height 2px
+        width 0
+        background-color $accent-color
+        transition 0.2s ease-in-out
+      &:hover::after
+        width 100%
+      &:hover
+        color $accent-color
+
+  .burger-close
+    position absolute
+    right 30px
+    top 25px
+    font-size 28px
+    color $accent-color
+    cursor pointer
+
+.slipped
+  right 0 !important
+
+.pushed
+  transition 0.4s ease-in-out
+  margin-left -300px

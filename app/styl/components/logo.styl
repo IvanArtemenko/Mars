@@ -1,0 +1,61 @@
+.site-logo
+  a
+    position relative
+    display block
+    margin-top 30px
+    color black
+    font-size 24px
+    font-weight bolder
+    &::after
+      content ""
+      position absolute
+      display block
+      top 0
+      right -11px
+      width 11px
+      height 11px
+      border 3px solid $accent-color
+      background-color white
+      border-radius 50%
+    &::before
+      content ""
+      position absolute
+      display block
+      width 51px
+      height 51px
+      top -20px
+      right -31px
+      opacity 0
+      border-radius 50%
+      border 10px solid $accent-color
+    &:hover
+      text-decoration none
+    &:hover::before
+      animation pulsation 1s ease-out
+      animation-iteration-count infinite
+    +media($screen-xs-max)
+      margin-left 15px
+
+
+@keyframes pulsation
+  0%
+    transform scale(0)
+    opacity 0.0
+  15%
+    transform scale(0.1)
+    opacity: 0.1
+  30%
+    transform scale(0.2)
+    opacity 0.2
+  45%
+    transform scale(0.3)
+    opacity 0.3
+  60%
+    transform scale(0.4)
+    opacity 0.4
+  75%
+    transform scale(0.5)
+    opacity 0.5
+  100%
+    transform scale(0.6)
+    opacity 0.0

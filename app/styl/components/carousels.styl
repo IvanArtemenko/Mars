@@ -1,0 +1,48 @@
+.vertical-carousel
+  margin-top 300px
+  +media($screen-xs-max)
+    margin-top 175px
+  ul
+    display inline-block
+    .carousel-item
+      display none
+      &:first-child
+        display block
+      p.xl-title
+        word-break break-all
+        +media(1920px)
+          width 500px
+        +media($screen-sm-max)
+          width 400px
+        +media($screen-xs-max)
+          width 300px
+      p.text-justify
+        width 330px
+        color $grey-dark
+        word-break break-all
+        +media($screen-xs-max)
+          width 300px
+      +media($screen-xs-min)
+        p.xl-title
+          font-size 24px
+          width 160px
+        p.text-justify
+          width 160px
+
+  .carousel-indis
+    float left
+    margin 0 15px 0 0
+    padding 0
+    +media($screen-xs-max)
+      margin 0 15px 0 15px
+    li
+      color #e1e1e1
+      &:not(:first-child)
+        padding-top 15px
+      i
+        cursor pointer
+        font-size 9px
+        transition .4s ease-in-out
+
+    .current-indicator
+      color $accent-color
