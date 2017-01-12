@@ -72,6 +72,8 @@
   position relative
   width 100%
   transition 0.4s ease-in-out
+  .row
+    position relative
 
   .header-phone
     margin 35px 0 0 40px
@@ -120,3 +122,24 @@
       color white
       cursor pointer
 
+.scrolldown-text
+  position absolute
+  width 100px
+  left -45px
+  bottom -130px
+  font-weight bold
+  animation bounce 2s infinite
+  +media($screen-xs-max)
+    display none
+
+@keyframes bounce
+  0%
+  20%
+  50%
+  80%
+  100%
+    transform translateY(0) rotate(-90deg)
+  40%
+    transform translateY(-25px) rotate(-90deg)
+  60%
+    transform translateY(-10px) rotate(-90deg)
