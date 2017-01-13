@@ -47,6 +47,25 @@
     background url("../../static/img/fly-higher.png") no-repeat
     background-size cover
     cols(8, 8, 7, 12)
+    &:hover .btn-white
+      transform rotate(0deg)
+    &:hover .dark-side
+      +media(1920px)
+        width 600px
+      +media(1300px)
+        width 500px
+      +media(1150px)
+        width 400px
+      +media(992px)
+        width 300px
+      +media(930px)
+        width 250px
+      +media(860px)
+        width 230px
+      +media(820px)
+        width 200px
+      +media($screen-xs-max)
+        width 100%
 
     .dark-side
       position relative
@@ -96,25 +115,6 @@
         float none
         &::after
           display none
-
-    &:hover .btn-white
-      transform rotate(0deg)
-    &:hover .dark-side
-        width 600px
-      +media(1300px)
-        width 500px
-      +media(1150px)
-        width 400px
-      +media(992px)
-        width 300px
-      +media(930px)
-        width 250px
-      +media(860px)
-        width 230px
-      +media(820px)
-        width 200px
-      +media($screen-xs-max)
-        width 100%
 
 
 @keyframes pulsation-tap
