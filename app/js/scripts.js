@@ -22,16 +22,12 @@ jQuery(function ($) {
     });
 
     $burger.on("click", function () {
-        $(".examples-section").addClass("pushed");
-        $(".header-inner").addClass("pushed");
-        $(".header-banner").addClass("pushed");
+        $(".examples-section, .header-inner, .header-banner").addClass("pushed");
         $(".hidden-menu").addClass("slipped");
     });
 
     $burgerClose.on("click", function () {
-        $(".examples-section").removeClass("pushed");
-        $(".header-inner").removeClass("pushed");
-        $(".header-banner").removeClass("pushed");
+        $(".examples-section, .header-inner, .header-banner").removeClass("pushed");
         $(".hidden-menu").removeClass("slipped");
     });
 
