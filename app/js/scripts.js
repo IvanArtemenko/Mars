@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-    $(".header-banner").height($(window).height());
+    $(".header-section").height($(window).height());
 
     var $redSection = $(".red-section");
     var $drone = $(".drone");
@@ -22,12 +22,14 @@ jQuery(function ($) {
     });
 
     $burger.on("click", function () {
+        $(".examples-section").addClass("pushed");
         $(".header-inner").addClass("pushed");
         $(".header-banner").addClass("pushed");
         $(".hidden-menu").addClass("slipped");
     });
 
     $burgerClose.on("click", function () {
+        $(".examples-section").removeClass("pushed");
         $(".header-inner").removeClass("pushed");
         $(".header-banner").removeClass("pushed");
         $(".hidden-menu").removeClass("slipped");

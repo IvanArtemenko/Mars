@@ -15,6 +15,10 @@ media($width)
   @media screen and (max-width: $width)
     {block}
 
+my-opacity($opacity)
+  opacity: $opacity
+  filter opacity($opacity)
+
 placeholder()
   &::-webkit-input-placeholder
     {block}
