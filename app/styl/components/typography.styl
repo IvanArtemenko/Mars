@@ -1,10 +1,33 @@
 .xl-title
   color black
+  display block
   font-weight bold
   font-size 48px
 
+.lg-title
+  @extend .xl-title
+  font-size 36px
+
 .gray-text
-  color $grey-dark
+  color $gray-dark !important
+
+  &:hover
+    @color
 
 .white-text
-  color white
+  color white !important
+
+  &:hover
+    @color
+
+.black-text
+  color black
+
+  &:hover
+    @color
+
+.red-text
+  color $accent-color !important
+
+  &:hover
+    @color

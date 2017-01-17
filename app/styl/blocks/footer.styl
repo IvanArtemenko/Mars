@@ -1,0 +1,44 @@
+.main-footer
+  position relative
+  height 400px
+
+  .footer-text
+    centralizer(true, true)
+    transition all 0.4s ease-in-out
+
+    .site-logo
+      a
+        margin 0 auto
+
+    p
+      position relative
+      margin-top 10px
+      z-index 100
+
+    &::before
+      content 'phantom'
+      position absolute
+      display block
+      cursor default
+      color white
+      z-index -10
+      text-shadow 8px 13.9px 95px rgba(0, 0, 0, 0.05)
+      font-weight bolder
+      text-transform uppercase
+      font-size 180px
+      centralizer(true, true)
+
+      +media($screen-lg)
+        font-size 160px
+
+      +media($screen-md-max)
+        font-size 140px
+
+      +media($screen-sm-max)
+        font-size 120px
+
+      +media($screen-xs-max)
+        font-size 70px
+
+      +media($screen-xs-min)
+        display none

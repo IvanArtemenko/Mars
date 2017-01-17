@@ -1,14 +1,25 @@
 jQuery(function ($) {
 
-    $(".header-section").height($(window).height());
+    $(".header-section, .start-journey").height($(window).height());
 
-    var $redSection = $(".red-section");
-    var $drone = $(".drone");
-    var redSectionWidth = $redSection.outerWidth();
-    var $burger = $(".burger");
-    var $burgerClose = $(".burger-close");
-    var $sliderItem = $(".carousel-item");
-    var $indicator = $(".carousel-indis i");
+    var $redSection = $(".red-section"),
+        $drone = $(".drone"),
+        redSectionWidth = $redSection.outerWidth(),
+        $burger = $(".burger"),
+        $burgerClose = $(".burger-close"),
+        $sliderItem = $(".carousel-item"),
+        $indicator = $(".carousel-indis i"),
+        $hiddenMenu = $(".hidden-menu"),
+        $showTextBtn = $(".show-text"),
+        $pushElements = $("" +
+            ".examples-section, " +
+            ".header-inner, " +
+            ".header-banner, " +
+            ".features, " +
+            ".generation-vision, " +
+            ".generation-flying," +
+            ".start-journey," +
+            ".footer-text");
 
     $drone.css({
         right: redSectionWidth - $drone.width() / 2
@@ -22,13 +33,13 @@ jQuery(function ($) {
     });
 
     $burger.on("click", function () {
-        $(".examples-section, .header-inner, .header-banner").addClass("pushed");
-        $(".hidden-menu").addClass("slipped");
+        $pushElements.addClass("pushed");
+        $hiddenMenu.addClass("slipped");
     });
 
     $burgerClose.on("click", function () {
-        $(".examples-section, .header-inner, .header-banner").removeClass("pushed");
-        $(".hidden-menu").removeClass("slipped");
+        $pushElements.removeClass("pushed");
+        $hiddenMenu.removeClass("slipped");
     });
 
     $indicator.on("click", function () {
@@ -38,6 +49,13 @@ jQuery(function ($) {
         $sliderItem.eq(thisIndicator).fadeIn(1500);
         $indicator.removeClass("current-indicator");
         $(this).addClass("current-indicator");
+    });
+
+    $showTextBtn.on("click", function () {
+        $(this).siblings(".generation-vision, .generation-flying, .xl-title").toggleClass("lg-title");
+        $(this).siblings(".hidden-text").slideToggle(300);
+        var text = $(this).text() == 'view more' ? 'view less' : 'view more';
+        $(this).text(text);
     });
 
 });

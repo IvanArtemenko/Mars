@@ -1,0 +1,22 @@
+.start-journey
+  position relative
+  margin-top 30px
+  background url("../../static/img/journey-bg.png") no-repeat center center
+  background-size cover
+  transition all 0.4s ease-in-out
+
+  .desc-container
+    centralizer(true, true)
+    top 80%
+
+    +media($screen-xs-max)
+      top 65%
+
+    +media($screen-xs-min)
+      top 60%
+
+  .xl-title
+    transition 0.3s ease-in-out
+
+  .btn-white
+    margin 0 auto

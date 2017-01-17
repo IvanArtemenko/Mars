@@ -1,0 +1,44 @@
+.generation-vision
+  margin-top 80px
+  @extend .examples-section
+
+  &::after
+    content ""
+    height 450px
+    cols(6, 6, 6, 12)
+    background url("../../static/img/generation-vision.png") no-repeat center center
+    background-size cover
+
+    +media($screen-xs-max)
+      display none
+
+  .vision-description
+    position relative
+    height 450px
+    background-color $black-color
+    cols(6, 6, 6, 12)
+
+    p
+      color white
+      word-break keep-all
+
+    .xl-title
+      margin-top 15%
+      color white
+      transition 0.3s ease-in-out
+
+    &::after
+      content ""
+      right 0
+      z-index 1
+      height 400px
+      width 200px
+      centralizer(false, true)
+      background url("../../static/img/black-drone.png") no-repeat right center
+      background-size cover
+
+.desc-container
+  position relative
+  z-index 100
+  width 85%
+  margin 0 auto

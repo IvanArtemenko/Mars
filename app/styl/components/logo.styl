@@ -1,11 +1,14 @@
 .site-logo
+
   a
     position relative
     display block
+    width 75.9px
     margin-top 30px
     color black
     font-size 24px
     font-weight bolder
+
     &::after
       content ""
       position absolute
@@ -17,6 +20,7 @@
       border 3px solid $accent-color
       background-color white
       border-radius 50%
+
     &::before
       content ""
       position absolute
@@ -28,11 +32,14 @@
       opacity 0
       border-radius 50%
       border 10px solid $accent-color
+
     &:hover
       text-decoration none
+
     &:hover::before
       animation pulsation 1s ease-out
       animation-iteration-count infinite
+
     +media($screen-xs-max)
       margin-left 15px
 

@@ -1,11 +1,31 @@
 .btn-white
   display block
   padding 15px 30px
-  outline none
-  border none
   border-radius 28px
   color black
   font-size 16px
   font-weight bold
   background-color white
   transition background-color 0.3s ease
+
+  &:hover
+    color black
+
+  &:active
+    box-shadow none
+
+.transparent
+
+  &-black
+    @extend .btn-white
+    color white
+    background-color transparent
+    border 2px solid #3b3b3b
+
+  &-white
+    @extend .transparent-black
+    color black
+    border 2px solid #eff2f6
+
+.hidden-text
+  display none

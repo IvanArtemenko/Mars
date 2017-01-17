@@ -1,0 +1,20 @@
+.generation-flying
+  @extend .generation-vision
+
+  &::after
+    background url("../../static/img/drone.png") no-repeat center center
+    background-size 100%
+
+
+  .flying-description
+    position relative
+    height 450px
+    cols(6, 6, 6, 12)
+
+    p
+      color black
+      word-break keep-all
+
+    .xl-title
+      margin-top 15%
+      transition 0.3s ease-in-out

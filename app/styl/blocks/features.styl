@@ -1,0 +1,42 @@
+.features
+  margin-top 80px
+
+  .features-list
+    padding-left 0
+    overflow hidden
+    text-align center
+    list-style-type none
+
+    li
+      cols(3, 3, 3, 12)
+      text-align center
+
+      +media($screen-xs-max)
+        margin-top 50px
+
+      img
+        display block
+        margin 0 auto
+
+      a
+        display block
+        margin-top 25px
+        color black
+        font-size 18px
+        transition color 0.3s ease
+
+        &:hover
+          color $accent-color
+
+      .new-technology
+        transition 0.5s ease-in-out
+
+        &:hover
+          animation rotate 1s ease-out
+
+@keyframes rotate
+  0%
+    transform rotate(0deg)
+
+  100%
+    transform rotate(360deg)
